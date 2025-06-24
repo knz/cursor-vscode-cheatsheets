@@ -1,0 +1,147 @@
+\documentclass[10pt,landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+% Define colors
+\definecolor{sectioncolor}{RGB}{52, 73, 94}
+\definecolor{keycolor}{RGB}{41, 128, 185}
+
+% Custom commands
+\newcommand{\key}[1]{\textcolor{keycolor}{\texttt{#1}}}
+\newcommand{\action}[1]{#1}
+
+% Remove page numbers
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt} % remove header line
+\renewcommand{\footrulewidth}{0pt} % remove footer line
+\fancyfoot[C]{\small\copyright\ 2025 Raphael Poss. Licensed under CC BY-SA 4.0.}
+
+% Reduce spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\columnsep}{20pt}
+
+\begin{document}
+
+\begin{center}
+{\huge\textbf{Cursor Keyboard Shortcuts}}\\
+{\large Cheat Sheet (Emacs Notation) --- Cursor version 1.1}\\
+\vspace{0.5em}
+{\small C- = Cmd/Ctrl, M- = Option/Alt, S- = Shift}
+\end{center}
+
+\vspace{0.5em}
+
+\begin{multicols}{2}
+
+\section*{\textcolor{sectioncolor}{General}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-i} / \key{C-l} & Toggle Sidepanel \\
+\key{C-.} & Open Mode Menu \\
+\key{C-/} & Loop between AI models \\
+\key{C-S-j} & Open Cursor settings \\
+\key{C-,} & Open General settings \\
+\key{C-S-p} & Open command palette \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Terminal}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-k} & Open terminal prompt bar \\
+\key{C-RET} & Run generated command \\
+\key{ESC} & Accept command \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Code Selection \& Context}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{@} & @-symbols \\
+\key{\#} & Files \\
+\key{\textbackslash} & Shortcut commands \\
+\key{C-S-l} & Add selection to chat \\
+\key{C-S-k} & Add selection to edit \\
+\key{C-l} & Add selection to new chat \\
+\key{C-m} & Toggle file reading strategies \\
+\key{C-→} & Accept next word of suggestion \\
+\key{C-RET} & Search codebase in chat \\
+select, \key{C-c C-v} & Add copied reference code as context \\
+select, \key{C-c C-S-v} & Add copied code as text context \\
+\bottomrule
+\end{tabular}
+
+{\small\textbf{@Files, @Folders, @Code, @Docs, @Notepads, @Past..., @Cursor rules, @Web, @Link, @Recent..., @Lint errors (chat only), @Definitions (C-K only)}}
+
+\section*{\textcolor{sectioncolor}{Cmd+K}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-k} & Open \\
+\key{C-S-k} & Toggle input focus \\
+\key{RET} & Submit \\
+\key{C-S-Bksp} & Cancel \\
+\key{M-RET} & Ask quick question \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Chat}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{RET} & Submit \\
+\key{C-S-Bksp} & Cancel generation \\
+\key{C-l} & Add selected code as context \\
+\key{C-S-l} & Add selected code as context \\
+\key{C-RET} & Accept all changes \\
+\key{C-Bksp} & Reject all changes \\
+\key{TAB} & Cycle to next message \\
+\key{S-TAB} & Cycle to previous message \\
+\key{C-M-/} & Open model toggle \\
+\key{C-n} / \key{C-r} & Create new chat \\
+\key{C-t} & Create new chat tab \\
+\key{C-[} & Open previous chat \\
+\key{C-]} & Open next chat \\
+\key{C-w} & Close chat \\
+\key{ESC} & Unfocus the field \\
+\bottomrule
+\end{tabular}
+
+
+
+\section*{\textcolor{sectioncolor}{Tab}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{TAB} & Accept suggestion \\
+\key{C-→} & Accept next word \\
+\bottomrule
+\end{tabular}
+
+
+\end{multicols}
+
+\end{document}

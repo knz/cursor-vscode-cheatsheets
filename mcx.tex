@@ -1,0 +1,245 @@
+\documentclass[10pt,landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+% Define colors
+\definecolor{sectioncolor}{RGB}{52, 73, 94}
+\definecolor{keycolor}{RGB}{41, 128, 185}
+
+% Custom commands
+\newcommand{\key}[1]{\textcolor{keycolor}{\texttt{#1}}}
+\newcommand{\action}[1]{#1}
+
+% Remove page numbers
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt} % remove header line
+\renewcommand{\footrulewidth}{0pt} % remove footer line
+\fancyfoot[C]{\small\copyright\ 2025 Raphael Poss. Licensed under CC BY-SA 4.0.}
+
+% Reduce spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\columnsep}{20pt}
+
+\begin{document}
+
+\begin{center}
+{\huge\textbf{VSCode Emacs MCX Keyboard Shortcuts}}\\
+{\large Cheat Sheet (Emacs Notation) --- vscode-emacs-mcx}\\
+\vspace{0.5em}
+{\small C- = Cmd/Ctrl, M- = Option/Alt, S- = Shift}
+\end{center}
+
+\vspace{0.5em}
+
+\begin{multicols}{2}
+
+\section*{\textcolor{sectioncolor}{Movement}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-f} & Move forward (forward-char) \\
+\key{C-b} & Move backward (backward-char) \\
+\key{C-n} & Move to the next line (next-line) \\
+\key{C-p} & Move to the previous line (previous-line) \\
+\key{C-a} & Move to the beginning of line \\
+\key{C-e} & Move to the end of line \\
+\key{M-f} & Move forward by one word unit \\
+\key{M-b} & Move backward by one word unit \\
+\key{C-→}, \key{M-→} & Right word (behaves like M-f) \\
+\key{C-←}, \key{M-←} & Left word (behaves like M-b) \\
+\key{M-m} & Move to first non-whitespace character \\
+\key{C-v} & Scroll down by one screen unit \\
+\key{M-v} & Scroll up by one screen unit \\
+\key{M-S-[} & Move to previous paragraph beginning \\
+\key{M-S-]} & Move to next paragraph end \\
+\key{M-S-,} & Move to the top of the buffer \\
+\key{M-S-.} & Move to the end of the buffer \\
+\key{M-g g} & Jump to line (command palette) \\
+\key{M-g n} & Jump to next error \\
+\key{M-g p} & Jump to previous error \\
+\key{C-l} & Center screen on current line \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Search \& Replace}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-s} & Incremental search forward \\
+\key{C-r} & Incremental search backward \\
+\key{C-M-s} & Begin incremental regexp search \\
+\key{C-M-r} & Begin reverse incremental regexp search \\
+\key{M-S-5} & Replace (query-replace) \\
+\key{C-M-S-5} & Replace with regexp \\
+\key{C-M-n} & Add selection to next find match \\
+\key{C-M-p} & Add selection to previous find match \\
+\key{M-s o} & Open occur command \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Editing \& Killing}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-d} & Delete right (DEL) \\
+\key{C-h} & Delete left (BACKSPACE) \\
+\key{M-\textbackslash} & Delete spaces and tabs around point \\
+\key{C-x C-o} & Delete blank lines around \\
+\key{M-S-6} & Join two lines cleanly \\
+\key{M-d} & Kill word \\
+\key{M-Bksp} & Kill word left \\
+\key{C-k} & Kill from cursor to end of line \\
+\key{C-S-Bksp} & Kill whole line \\
+\key{C-w} & Kill region \\
+\key{M-w} & Copy region to kill ring \\
+\key{C-y} & Yank \\
+\key{M-y} & Yank pop \\
+\key{C-o} & Open line \\
+\key{C-j} & New line \\
+\key{C-m} & New line \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{General Operations}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-x h} & Select All \\
+\key{C-x u}, \key{C-/} & Undo \\
+\key{C-;} & Toggle line comment in and out \\
+\key{M-;} & Toggle region comment in and out \\
+\key{C-x C-l} & Convert to lower case \\
+\key{C-x C-u} & Convert to upper case \\
+\key{M-c} & Convert to title case \\
+\key{C-g} & Cancel \\
+\key{C-'} & IntelliSense Suggestion \\
+\key{M-x} & Open command palette \\
+\key{C-M-SPC} & Toggle SideBar visibility \\
+\key{C-x z} & Toggle Zen Mode \\
+\key{C-x C-c} & Close window \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Mark \& Region}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-SPC} & Set the mark at point, and activate it \\
+\key{C-SPC C-SPC} & Set mark without activating it \\
+\key{C-u C-SPC} & Move point to where mark was \\
+\key{C-x C-x} & Exchange point and mark \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Files \& Buffers}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-x C-f} & QuickOpen a file \\
+\key{C-x C-s} & Save \\
+\key{C-x C-w} & Save as \\
+\key{C-x s} & Save all files \\
+\key{C-x C-n} & Open new window \\
+\key{C-x b} & Switch to another open buffer \\
+\key{C-x k} & Close current tab (buffer) \\
+\key{C-x ←} & Select the previous tab \\
+\key{C-x →} & Select the next tab \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Windows \& Splits}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-x 0} & Close editors in current group \\
+\key{C-x 1} & Close editors in other group \\
+\key{C-x 2} & Split editor horizontal \\
+\key{C-x 3} & Split editor vertical \\
+\key{C-x 4} & Toggle split layout \\
+\key{C-x o} & Focus other split editor \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Rectangles}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-x r k} & Kill rectangle \\
+\key{C-x r M-w} & Copy rectangle \\
+\key{C-x r d} & Delete rectangle \\
+\key{C-x r y} & Yank rectangle \\
+\key{C-x r o} & Insert blank space (open rectangle) \\
+\key{C-x r c} & Clear rectangle \\
+\key{C-x r t} & Replace rectangle with string \\
+\key{C-x SPC} & Toggle Rectangle Mark mode \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Registers}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-x r s r} & Copy region into register r \\
+\key{C-x r i r} & Insert text from register r \\
+\key{C-x r SPC r} & Record position in register r \\
+\key{C-x r j r} & Jump to position in register r \\
+\key{C-x r r r} & Copy rectangle to register r \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Prefix Arguments}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-u} & Universal argument \\
+\key{M-<number>} & Digit argument \\
+\key{M--} & Negative argument \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{S-expressions}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-M-f} & Move forward over balanced expression \\
+\key{C-M-b} & Move backward over balanced expression \\
+\key{C-M-S-2} & Set mark after following balanced expression \\
+\key{C-M-k} & Kill balanced expression forward \\
+\key{C-M-Bksp} & Kill balanced expression backward \\
+\key{C-S-k} & Kill line respecting delimiters \\
+\bottomrule
+\end{tabular}
+
+\end{multicols}
+
+\end{document}
