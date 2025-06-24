@@ -1,0 +1,136 @@
+\documentclass[10pt,landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+% Define colors
+\definecolor{sectioncolor}{RGB}{52, 73, 94}
+\definecolor{keycolor}{RGB}{41, 128, 185}
+
+% Custom commands
+\newcommand{\key}[1]{\textcolor{keycolor}{\texttt{#1}}}
+\newcommand{\action}[1]{#1}
+
+% Remove page numbers
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt} % remove header line
+\renewcommand{\footrulewidth}{0pt} % remove footer line
+\fancyfoot[C]{\small\copyright\ 2025 Raphael Poss. Licensed under CC BY-SA 4.0.}
+
+% Reduce spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\columnsep}{20pt}
+
+\begin{document}
+
+\begin{center}
+{\huge\textbf{VSCode \& Cursor + MCX Screen Navigation}}\\
+{\large Cheat Sheet (Emacs Notation)}\\
+\vspace{0.5em}
+{\small C- = Cmd/Ctrl, M- = Option/Alt, S- = Shift}
+\end{center}
+
+\vspace{0.5em}
+
+\begin{multicols}{2}
+
+\section*{\textcolor{sectioncolor}{Editor panes}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-1}, \key{C-2}, etc & Focus on editor pane \\
+\key{C-x o} & Focus on next editor pane (MCX) \\
+\key{C-x 1} & Close other panes \\
+\key{C-x 2} & Split pane vertically \\
+\key{C-x 3} & Split pane horizontally \\
+\key{C-x 0} & Close pane \\
+\key{C-M-←} / \key{C-M-→} & Move editor to left/right pane\\
+\key{C-PgUp} / \key{C-PgDown} & Focus to next/previous tab \\
+\key{C-S-PgUp} / \key{PgDown} & Reorder tabs inside pane \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Files}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-x C-f} & Open file \\
+\key{C-x C-s} & Save file \\
+\key{C-x b} & Select open file \\
+\key{C-x C-w}  / \key{C-S-s} & Save file as \\
+\key{C-x s} & Save all \\
+\key{C-x k} & Close current file \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Left pane / Sidebar}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-M-SPC} & Toggle sidebar \\
+\key{C-S-e} & Explorer \\
+\key{C-S-f} & Search \\
+\key{C-S-g g} & Source Control → Git \\
+\key{C-S-x} & Extensions \\
+\key{C-S-d} & Run \& Debug \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Explorer}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-RET} & Open in last pane \\
+\key{C-S-RET} & Open in new pane \\
+\key{C-M-c} & Copy path \\
+\key{C-M-S-c} & Copy relative path \\
+\key{C-c} & Copy file \\
+\key{C-v} & Paste file \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Bottom pane}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-S-m} & Problems pane \\
+\key{C-M C-h} & Output (conflicts with MCX) \\
+\key{C-S-M-y} & Debug Console \\
+\key{C-`} & Terminal / Toggle bottom pane \\
+\bottomrule
+\end{tabular}
+
+\section*{\textcolor{sectioncolor}{Terminal}}
+
+\begin{tabular}{@{}p{3cm}p{6.5cm}@{}}
+\toprule
+\textbf{Shortcut} & \textbf{Action} \\
+\midrule
+\key{C-`} & Show/hide terminal \\
+\key{C-S-5} & Split terminal \\
+\key{C-S-`} & Add terminal \\
+\key{C-PgUp} / \key{C-PgDown} & Focus to next/previous terminal \\
+\key{C-S-←} / \key{C-R-→} & Resize split terminal horizontally\\
+\bottomrule
+\end{tabular}
+
+\end{multicols}
+
+\end{document}
